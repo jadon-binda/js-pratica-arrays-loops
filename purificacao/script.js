@@ -1,11 +1,15 @@
 const nomeCorrompido = "*Canis %lupus )familiaris";
-let nomePurificado = "";
+const caracteresSujos = ["!", "@", "#", "$", "%", "&", "*", "(", ")"];
 
-for (const caractere of nomeCorrompido) {
-  if (caractere !== "!" && caractere !== "@" && caractere !== "#" && caractere !== "$" && caractere !== "%" && caractere !== "&" &&
-    caractere !== "*" && caractere !== "(" && caractere !== ")") {
-    nomePurificado += caractere;
+function removeCaracteresEspeciais(nomeCorrompido) {
+  let nomePurificado = "";
+  for (const caractere of nomeCorrompido) {
+    if (caractere !== "!" && caractere !== "@" && caractere !== "#" && caractere !== "$" && caractere !== "%" && caractere !== "&" &&
+      caractere !== "*" && caractere !== "(" && caractere !== ")") {
+      nomePurificado += caractere;
+    }
   }
+  return nomePurificado;
 }
 
-console.log(nomePurificado);
+console.log(removeCaracteresEspeciais(nomeCorrompido));
