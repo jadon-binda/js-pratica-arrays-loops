@@ -1,10 +1,8 @@
-const nomeCorrompido = "*Canis %lupus )familiaris";
-const caracteresSujos = ["!", "@", "#", "$", "%", "&", "*", "(", ")"];
-
 function removeCaracteresEspeciais(nomeCorrompido) {
   let nomePurificado = "";
   for (const caractere of nomeCorrompido) {
-    if (caractere !== "!" && caractere !== "@" && caractere !== "#" && caractere !== "$" && caractere !== "%" && caractere !== "&" &&
+    if (caractere !== "!" && caractere !== "@" && caractere !== "#" &&
+      caractere !== "$" && caractere !== "%" && caractere !== "&" &&
       caractere !== "*" && caractere !== "(" && caractere !== ")") {
       nomePurificado += caractere;
     }
@@ -12,4 +10,6 @@ function removeCaracteresEspeciais(nomeCorrompido) {
   return nomePurificado;
 }
 
-console.log(removeCaracteresEspeciais(nomeCorrompido));
+console.log(removeCaracteresEspeciais("*Canis %lupus )familiaris)"));
+console.log(removeCaracteresEspeciais("Felis) silvestris *catus&"));
+console.log(removeCaracteresEspeciais("$Ailuropoda@ melanoleuca!"));
