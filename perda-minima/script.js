@@ -3,7 +3,7 @@ const perdaMinima = (precos) => {
 
   for (i = 0; i < precos.length; i++) {
     for (j = i + 1; j < precos.length; j++) {
-      let diferenca = precos[i] - precos[j];
+      const diferenca = precos[i] - precos[j];
 
       if (diferenca > 0 && diferenca < menorDiferenca) {
         menorDiferenca = diferenca;
