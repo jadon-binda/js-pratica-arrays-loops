@@ -1,5 +1,5 @@
 const perdaMinima = (precos) => {
-  let menorDiferenca = 100;
+  let menorDiferenca = Number.MAX_SAFE_INTEGER;
 
   for (i = 0; i < precos.length; i++) {
     for (j = i + 1; j < precos.length; j++) {
